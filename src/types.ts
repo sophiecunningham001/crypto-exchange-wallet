@@ -49,6 +49,17 @@ export interface BalanceMutationInput {
   amount: string;
 }
 
+export interface LedgerEntry {
+  id: string;
+  walletPublicId: string;
+  assetSymbol: string;
+  networkCode: string;
+  delta: string;
+  type: "deposit" | "withdrawal" | "pending" | "confirmed" | "fee";
+  referenceId: string;
+  createdAt: string;
+}
+
 export interface WithdrawalSubmissionInput {
   idempotencyKey: string;
   custodyWalletRef: string;
