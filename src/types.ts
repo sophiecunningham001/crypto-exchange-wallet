@@ -33,6 +33,22 @@ export interface DepositAddressRecord {
   address: string;
 }
 
+export interface WalletAssetBalance {
+  walletPublicId: string;
+  assetSymbol: string;
+  networkCode: string;
+  available: string;
+  pending: string;
+  total: string;
+}
+
+export interface BalanceMutationInput {
+  walletPublicId: string;
+  assetSymbol: string;
+  networkCode: string;
+  amount: string;
+}
+
 export interface WithdrawalSubmissionInput {
   idempotencyKey: string;
   custodyWalletRef: string;
