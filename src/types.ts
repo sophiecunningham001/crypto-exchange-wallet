@@ -60,6 +60,22 @@ export interface LedgerEntry {
   createdAt: string;
 }
 
+export interface WalletServiceRecord {
+  walletPublicId: string;
+  userPublicId: string;
+  custodyWalletRef: string;
+  networkMode: NetworkMode;
+}
+
+export interface WalletServiceBalanceSnapshot {
+  walletPublicId: string;
+  assetSymbol: string;
+  networkCode: string;
+  available: string;
+  pending: string;
+  total: string;
+}
+
 export interface WithdrawalSubmissionInput {
   idempotencyKey: string;
   custodyWalletRef: string;
